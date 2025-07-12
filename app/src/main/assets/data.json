@@ -1,0 +1,19 @@
+{
+  "category_list": [
+    {
+      "imageAssetPath": "Fish_Greill.png",
+      "title": "Fish"
+    },
+    {
+      "imageAssetPath": "Masala-Dosa.jpg",
+      "title": "Dosa"
+    },
+    {
+      "imageAssetPath": "Rice.jpg",
+      "title": "Rice"
+    }
+  ],
+  "recipe_list": [
+
+  ]
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Cooking Recipe Application</string>
+    <string name="recipe_cat">Dessert</string>
+</resources>
