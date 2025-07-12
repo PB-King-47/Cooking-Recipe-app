@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2)); // 2 columns
         recyclerView.setNestedScrollingEnabled(false);
 
-        // ✅ Load JSON
+        // Load JSON
         cardList = loadCardDataFromJSON();
 
         adapter = new CardAdapter(cardList);
@@ -57,13 +57,14 @@ public class MainActivity extends AppCompatActivity {
 
             String json = new String(buffer, "UTF-8");
             JSONObject root = new JSONObject(json);
-            JSONArray jsonArray = root.getJSONArray("category_list");
+            JSONArray jsonArray = root.getJSONArray("categories");
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject obj = jsonArray.getJSONObject(i);
-                String image = obj.getString("imageAssetPath");
-                String title = obj.getString("title");
+                int id = obj.getInt("id");
+                String image = obj.getString("image");
+                String name = obj.getString("name");
 
-                items.add(new CardItem(image, title));
+                items.add(new CardItem(id, image, name));
             }
 
         } catch (Exception e) {

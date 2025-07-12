@@ -2,6 +2,7 @@ package com.example.cookingrecipeapplication;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.cookingrecipeapplication.Recipe;
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -35,12 +36,19 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
     @Override
     public void onBindViewHolder(@NonNull RecipeViewHolder holder, int position) {
         Recipe recipe = recipeList.get(position);
-        holder.name.setText(recipe.getName());
-        holder.image.setImageResource(recipe.getImageResId());
+        holder.name.setText(recipe.getTitle());
+//        holder.image.setImageResource(recipe.getImage());
+
+        String assetPath = "file:///android_asset/image/recipe_img/" + recipe.getImage();
+
+        Glide.with(holder.image.getContext())
+                .load(Uri.parse(assetPath)) // ← this is important
+                .into(holder.image);
 
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, RecipeDetailActivity.class); // ✅ Go to detail activity
-            intent.putExtra("recipe_name", recipe.getName());
+            intent.putExtra("id", recipe.getId());
+            intent.putExtra("recipe_name", recipe.getTitle());
             context.startActivity(intent);
         });
     }
@@ -56,8 +64,8 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
 
         public RecipeViewHolder(@NonNull View itemView) {
             super(itemView);
-            image = itemView.findViewById(R.id.imageDessert);
-            name = itemView.findViewById(R.id.textDessertName);
+            image = itemView.findViewById(R.id.imageRecipe);
+            name = itemView.findViewById(R.id.textRecipeName);
         }
     }
 }

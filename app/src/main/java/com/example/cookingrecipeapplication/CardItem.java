@@ -1,19 +1,22 @@
 package com.example.cookingrecipeapplication;
 
+// this CardItem is the Category item for home page
 public class CardItem {
-    private String imageAssetPath;
-    private String title;
+    private int id;
+    private String image;
+    private String name;
 
-    public CardItem(String imageAssetPath, String title) {
-        this.imageAssetPath = imageAssetPath;
-        this.title = title;
+    public CardItem(int id, String image, String name) {
+        this.id = id;
+        this.image = image;
+        this.name = name;
+    }
+    public int getId() { return id; }
+    public String getImage() {
+        return image;
     }
 
-    public String getImageAssetPath() {
-        return imageAssetPath;
-    }
-
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 }

@@ -11,9 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import android.content.Intent;
 
 import java.util.List;
-
+// This card Adapter is category adapter
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder> {
 
     private List<CardItem> itemList;
@@ -32,13 +33,21 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
     @Override
     public void onBindViewHolder(@NonNull CardViewHolder holder, int position) {
         CardItem item = itemList.get(position);
-        holder.textView.setText(item.getTitle());
+        holder.textView.setText(item.getName());
 
-        String assetPath = "file:///android_asset/image/" + item.getImageAssetPath();
+        String assetPath = "file:///android_asset/image/" + item.getImage();
 
         Glide.with(holder.imageView.getContext())
                 .load(Uri.parse(assetPath)) // ← this is important
                 .into(holder.imageView);
+
+        // Category button on click to pass data
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(v.getContext(), Recipes_list_page.class);
+            intent.putExtra("id", item.getId());
+            intent.putExtra("name", item.getName());
+            v.getContext().startActivity(intent);
+        });
     }
 
     @Override

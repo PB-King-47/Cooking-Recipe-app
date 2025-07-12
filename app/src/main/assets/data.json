@@ -1,19 +1,105 @@
 {
-  "category_list": [
+  "categories": [
     {
-      "imageAssetPath": "Fish_Greill.png",
-      "title": "Fish"
+      "id": 1,
+      "name": "Fish",
+      "image": "Fish_Greill.png"
     },
     {
-      "imageAssetPath": "Masala-Dosa.jpg",
-      "title": "Dosa"
+      "id": 2,
+      "name": "Dosa",
+      "image": "Masala-Dosa.jpg"
     },
     {
-      "imageAssetPath": "Rice.jpg",
-      "title": "Rice"
+      "id": 3,
+      "name": "Rice",
+      "image": "Rice.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Desserts",
+      "image": "desserts.png"
     }
   ],
-  "recipe_list": [
-
+  "recipes": [
+    {
+      "id": 101,
+      "category_id": 1,
+      "title": "Masala Omelette",
+      "image": "masala_omelette.jpg",
+      "prep_time": "10 mins",
+      "cook_time": "10 mins",
+      "servings": 2,
+      "ingredients": [
+        "2 eggs",
+        "1 small onion (chopped)",
+        "1 green chili (chopped)",
+        "1 tbsp coriander (chopped)",
+        "Salt to taste",
+        "Black pepper to taste",
+        "1 tbsp oil"
+      ],
+      "steps": [
+        "Crack eggs into a bowl and beat well.",
+        "Add chopped onion, chili, coriander, salt, and pepper. Mix.",
+        "Heat oil in a pan.",
+        "Pour the egg mixture and cook on low heat until golden.",
+        "Flip and cook the other side. Serve hot."
+      ]
+    },
+    {
+      "id": 102,
+      "category_id": 2,
+      "title": "Chicken Biryani",
+      "image": "chicken_biryani.jpg",
+      "prep_time": "30 mins",
+      "cook_time": "1 hr",
+      "servings": 4,
+      "ingredients": [
+        "2 cups basmati rice",
+        "500g chicken",
+        "1 cup yogurt",
+        "2 onions (sliced)",
+        "2 tomatoes (chopped)",
+        "1 tbsp ginger garlic paste",
+        "Biryani masala",
+        "Salt to taste",
+        "Fresh coriander and mint leaves"
+      ],
+      "steps": [
+        "Soak rice for 30 minutes.",
+        "Marinate chicken with yogurt, spices, and ginger garlic paste for 1 hour.",
+        "Fry onions until golden. Set aside half.",
+        "Cook marinated chicken with tomatoes.",
+        "Boil rice with whole spices until 70% done.",
+        "Layer rice over chicken. Top with fried onions, mint, and coriander.",
+        "Cook on low heat (dum) for 20 minutes."
+      ]
+    },
+    {
+      "id": 103,
+      "category_id": 4,
+      "title": "Chocolate Mug Cake",
+      "image": "choco_mug_cake.jpg",
+      "prep_time": "5 mins",
+      "cook_time": "2 mins",
+      "servings": 1,
+      "ingredients": [
+        "4 tbsp flour",
+        "3 tbsp sugar",
+        "2 tbsp cocoa powder",
+        "3 tbsp milk",
+        "2 tbsp oil",
+        "1/4 tsp baking powder",
+        "A pinch of salt",
+        "Vanilla essence"
+      ],
+      "steps": [
+        "Mix dry ingredients in a microwave-safe mug.",
+        "Add milk, oil, and vanilla. Mix until smooth.",
+        "Microwave for 1.5–2 minutes.",
+        "Let it cool slightly and enjoy!"
+      ]
+    }
   ]
 }
