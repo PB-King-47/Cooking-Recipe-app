@@ -37,7 +37,6 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
     public void onBindViewHolder(@NonNull RecipeViewHolder holder, int position) {
         Recipe recipe = recipeList.get(position);
         holder.name.setText(recipe.getTitle());
-//        holder.image.setImageResource(recipe.getImage());
 
         String assetPath = "file:///android_asset/image/recipe_img/" + recipe.getImage();
 

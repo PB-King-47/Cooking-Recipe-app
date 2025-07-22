@@ -61,12 +61,12 @@
             android:queryHint="Search for recipes..." />
 
         <!-- ✅ RecyclerView inside NestedScrollView -->
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/categoryView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:nestedScrollingEnabled="false"
-            android:padding="8dp"
             tools:listitem="@layout/item_card" />
 
         <!-- Add more content below if needed -->

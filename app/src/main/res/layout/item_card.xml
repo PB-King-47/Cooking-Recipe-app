@@ -7,16 +7,14 @@
     card_view:cardCornerRadius="12dp"
     card_view:cardElevation="6dp">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/cardImage"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="100dp"
             android:scaleType="centerCrop"
             android:src="@android:drawable/ic_menu_gallery" />
 
@@ -24,10 +22,14 @@
             android:id="@+id/cardTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="12dp"
+            android:background="#66000000"
             android:text="Title"
-            android:textColor="#000000"
+            android:textColor="@color/yeallo"
             android:textSize="16sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            android:textStyle="bold"
+            android:padding="6dp"
+            android:elevation="4dp" />
+    </FrameLayout>
 </androidx.cardview.widget.CardView>

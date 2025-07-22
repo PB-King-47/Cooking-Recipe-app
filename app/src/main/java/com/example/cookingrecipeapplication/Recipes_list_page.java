@@ -29,7 +29,7 @@ public class Recipes_list_page extends AppCompatActivity {
         Intent intent = getIntent(); // get the data form category function (cardAdaptor class)
         String catName = intent.getStringExtra("name");
 
-        TextView categoryTitle = findViewById(R.id.catName);
+        TextView categoryTitle = findViewById(R.id.resDetailsName);
         recyclerView = findViewById(R.id.recyclerViewRecipeList);// recyclerViewDesserts
         recipeList = new ArrayList<>();
 
