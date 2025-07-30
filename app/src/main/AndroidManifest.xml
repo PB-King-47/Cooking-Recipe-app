@@ -13,6 +13,9 @@
         android:theme="@style/Theme.CookingRecipeApplication"
         tools:targetApi="31">
         <activity
+            android:name=".FavoritePageActivity"
+            android:exported="false" />
+        <activity
             android:name=".RecipeDetailActivity"
             android:exported="false" />
         <activity
@@ -20,7 +23,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">

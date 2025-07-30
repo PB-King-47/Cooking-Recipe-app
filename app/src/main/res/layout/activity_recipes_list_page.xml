@@ -23,7 +23,7 @@
             android:padding="20dp">
 
             <Button
-                android:id="@+id/buttonBackRecipes"
+                android:id="@+id/buttonBackHome"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackgroundBorderless"
@@ -35,16 +35,15 @@
                 android:textColorLink="#FFFEFE"
                 app:icon="?attr/homeAsUpIndicator"
                 app:iconPadding="1dp"
-                app:iconSize="30dp" />
+                app:iconSize="25dp" />
 
             <TextView
                 android:id="@+id/resDetailsName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
                 android:text="@string/recipe_cat"
                 android:textColor="#FFFFFF"
-                android:textSize="34sp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
         </LinearLayout>
 

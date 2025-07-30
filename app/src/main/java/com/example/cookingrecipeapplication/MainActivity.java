@@ -1,6 +1,11 @@
 package com.example.cookingrecipeapplication;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,13 +27,15 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private CardAdapter adapter;
     private List<CardItem> cardList;
-
+    ImageButton btnFavorites;
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        Log.d("MainActivity", "MainActivity loaded");
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -38,6 +45,21 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.categoryView);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2)); // 2 columns
         recyclerView.setNestedScrollingEnabled(false);
+        btnFavorites = findViewById(R.id.favoriteImageButton); // match the ID
+
+        // Favorite button function
+        btnFavorites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start FavoritePageActivity
+                Intent intent = new Intent(MainActivity.this, FavoritePageActivity.class);
+
+                // If needed, pass user_id (e.g. 1 or 2)
+                intent.putExtra("user_id", 1);
+
+                startActivity(intent);
+            }
+        });
 
         // Load JSON
         cardList = loadCardDataFromJSON();
