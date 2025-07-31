@@ -16,7 +16,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="@color/grayes_black"
         android:orientation="vertical">
 
         <ImageView
@@ -29,6 +29,9 @@
             android:id="@+id/textRecipeName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/yeallo"
+            android:textStyle="bold"
+            android:textSize="18sp"
             android:paddingStart="5dp"
             android:paddingBottom="10dp"
             android:text="TextView" />
