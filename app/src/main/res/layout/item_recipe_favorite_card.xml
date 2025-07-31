@@ -8,6 +8,7 @@
     card_view:cardCornerRadius="12dp"
     card_view:cardElevation="4dp"
     android:layout_marginBottom="10dp"
+    android:layout_marginRight="5dp"
     card_view:cardBackgroundColor="@android:color/transparent"
     android:background="@drawable/card_background"
     android:foreground="?attr/selectableItemBackground">

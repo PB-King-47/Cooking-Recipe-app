@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private CardAdapter adapter;
     private List<CardItem> cardList;
-    ImageButton btnFavorites;
+    ImageButton btnFavorites, profileImageButton;
+
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2)); // 2 columns
         recyclerView.setNestedScrollingEnabled(false);
         btnFavorites = findViewById(R.id.favoriteImageButton); // match the ID
+        profileImageButton = findViewById(R.id.profileImageButton); // match the ID
 
         // Favorite button function
         btnFavorites.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +61,15 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("user_id", 1);
 
                 startActivity(intent);
+            }
+        });
+
+        // Profile button function
+        profileImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start FavoritePageActivity
+                Toast.makeText(getApplicationContext(), "Profile clicked!", Toast.LENGTH_SHORT).show();
             }
         });
 

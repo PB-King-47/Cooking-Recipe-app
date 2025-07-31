@@ -28,13 +28,13 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Recipe
 
     @NonNull
     @Override
-    public FavoriteAdapter.RecipeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecipeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_recipe_favorite_card, parent, false);
-        return new FavoriteAdapter.RecipeViewHolder(view);
+        return new RecipeViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FavoriteAdapter.RecipeViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecipeViewHolder holder, int position) {
         Recipe recipe = recipeList.get(position);
         holder.name.setText(recipe.getTitle());
 
@@ -45,7 +45,7 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Recipe
                 .into(holder.image);
 
         holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(context, FavoritePageActivity.class); // ✅ Go to detail activity
+            Intent intent = new Intent(context, RecipeDetailActivity.class); // ✅ Go to detail activity
             intent.putExtra("id", recipe.getId());
             intent.putExtra("recipe_name", recipe.getTitle());
             context.startActivity(intent);
