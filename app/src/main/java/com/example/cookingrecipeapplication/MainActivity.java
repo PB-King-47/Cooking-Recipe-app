@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Start FavoritePageActivity
-                Toast.makeText(getApplicationContext(), "Profile clicked!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Loading...", Toast.LENGTH_SHORT).show();
             }
         });
 
