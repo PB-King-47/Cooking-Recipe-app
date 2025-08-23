@@ -8,20 +8,20 @@ public class Recipe {
     private String title;
     private String image;
     private String prep_time;
-    private String cook_time;
+    private String cook_level;
     private int servings;
     private List<String> ingredients;
     private List<String> steps;
 
     // Full Constructor
     public Recipe(int id, int category_id, String title, String image, String prep_time,
-                  String cook_time, int servings, List<String> ingredients, List<String> steps) {
+                  String cook_level, int servings, List<String> ingredients, List<String> steps) {
         this.id = id;
         this.category_id = category_id;
         this.title = title;
         this.image = image;
         this.prep_time = prep_time;
-        this.cook_time = cook_time;
+        this.cook_level = cook_level;
         this.servings = servings;
         this.ingredients = ingredients;
         this.steps = steps;
@@ -55,8 +55,8 @@ public class Recipe {
         return prep_time;
     }
 
-    public String getCookTime() {
-        return cook_time;
+    public String getCookLevel() {
+        return cook_level;
     }
 
     public int getServings() {

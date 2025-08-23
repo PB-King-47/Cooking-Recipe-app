@@ -30,9 +30,6 @@ public class RecipeDetailAdapter extends RecyclerView.Adapter<RecipeDetailAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String item = items.get(position);
-        if (isStep) {
-            item = (position + 1) + ". " + item;
-        }
         holder.text.setText(item);
     }
 

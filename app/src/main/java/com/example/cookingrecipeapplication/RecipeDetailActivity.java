@@ -56,8 +56,8 @@ public class RecipeDetailActivity extends AppCompatActivity {
 
     private void showRecipe(Recipe recipe) {
         titleView.setText(recipe.getTitle());
-        cookTimeView.setText(recipe.getCookTime());
-        cookLevelView.setText("Easy"); // Optional — can add difficulty later
+        cookTimeView.setText(recipe.getPrepTime());
+        cookLevelView.setText(recipe.getCookLevel());
 
         // Load image from assets
         String assetPath = "file:///android_asset/image/recipe_img/" + recipe.getImage();
