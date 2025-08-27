@@ -1,6 +1,8 @@
 package com.example.cookingrecipeapplication;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,11 +23,21 @@ public class Recipes_list_page extends AppCompatActivity {
     private RecipeAdapter adapter;
     private List<Recipe> recipeList;
     private int selectedCatID;
+    Button btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipes_list_page);
+
+        btnBack = findViewById(R.id.buttonBackHome);
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getOnBackPressedDispatcher().onBackPressed();
+            }
+        });
 
         // Get category name & id from Intent
         Intent intent = getIntent();

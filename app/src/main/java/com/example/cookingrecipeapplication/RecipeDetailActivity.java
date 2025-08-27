@@ -1,7 +1,9 @@
 package com.example.cookingrecipeapplication;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -27,11 +29,21 @@ public class RecipeDetailActivity extends AppCompatActivity {
     ImageView imageView;
     RecyclerView ingListView, detailsListView;
     int recipeId;
+    Button btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_detail);
+
+        btnBack = findViewById(R.id.buttonBackHome);
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getOnBackPressedDispatcher().onBackPressed();
+            }
+        });
 
         // Get ID from intent
         recipeId = getIntent().getIntExtra("id", -1);
