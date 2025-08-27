@@ -8,37 +8,6 @@ import org.json.JSONObject;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-/*
-public class RecipesDataUtils {
-    public static  List<Recipe> loadCardDataFromJSON(Context context) {
-        List<Recipe> items = new ArrayList<>();
-        try {
-            InputStream is = context.getAssets().open("data.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-
-            String json = new String(buffer, "UTF-8");
-            JSONObject root = new JSONObject(json);
-            JSONArray jsonArray = root.getJSONArray("recipes");
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject obj = jsonArray.getJSONObject(i);
-                int id = obj.getInt("id");
-                int category_id = obj.getInt("category_id");
-                String title = obj.getString("title");
-                String image = obj.getString("image");
-
-                items.add(new Recipe(id, category_id, title, image));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return items;
-    }
-}
-*/
-
 
 public class RecipesDataUtils {
 

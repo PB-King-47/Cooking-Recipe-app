@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.cookingrecipeapplication.ui.login.LoginActivity;
+import com.example.cookingrecipeapplication.LoginActivity;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -36,15 +36,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-
-        Log.d("MainActivity", "MainActivity loaded");
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         recyclerView = findViewById(R.id.categoryView);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2)); // 2 columns
@@ -70,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         profileImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Start FavoritePageActivity
+                // Start LoginPageActivity
                 Toast.makeText(getApplicationContext(), "Loading...", Toast.LENGTH_SHORT).show();
 
                 // Start LoginActivity
@@ -113,38 +105,3 @@ public class MainActivity extends AppCompatActivity {
         return items;
     }
 }
-
-
-
-
-
-
-
-
-/*
-package com.example.cookingrecipeapplication;
-
-import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-    }
-}
-
- */
