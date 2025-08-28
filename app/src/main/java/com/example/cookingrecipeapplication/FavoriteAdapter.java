@@ -68,4 +68,3 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Recipe
         }
     }
 }
-

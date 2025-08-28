@@ -24,32 +24,33 @@
   "recipes": [
     {
       "id": 101,
-      "category_id": 1,
-      "title": "Masala Omelette",
-      "image": "masala_omelette.jpg",
-      "prep_time": "10 mins",
+      "category_id": 2,
+      "title": "Cheese Dosa",
+      "image": "cheese_dosa.png",
+      "prep_time": "15 mins",
       "cook_level": "Easy",
-      "servings": 2,
+      "servings": 1,
       "ingredients": [
-        "2 eggs",
-        "1 small onion (chopped)",
-        "1 green chili (chopped)",
-        "1 tbsp coriander (chopped)",
+        "2 cups dosa batter",
+        "½ cup grated cheese (cheddar or mozzarella)",
+        "1 small onion (finely chopped)",
+        "1 green chili (chopped, optional)",
+        "1 tbsp coriander leaves (chopped)",
         "Salt to taste",
-        "Black pepper to taste",
-        "1 tbsp oil"
+        "1 tbsp oil or butter"
       ],
       "steps": [
-        "Crack eggs into a bowl and beat well.",
-        "Add chopped onion, chili, coriander, salt, and pepper. Mix.",
-        "Heat oil in a pan.",
-        "Pour the egg mixture and cook on low heat until golden.",
-        "Flip and cook the other side. Serve hot."
+        "Heat a non-stick pan or tawa and grease lightly with oil/butter.",
+        "Pour a ladle of dosa batter and spread it in a thin circle.",
+        "Sprinkle chopped onion, chili, coriander, and salt on top.",
+        "Add grated cheese evenly over the dosa.",
+        "Drizzle a little oil/butter around the edges and cook on medium heat until golden and crisp.",
+        "Fold the dosa and serve hot with chutney or sambar."
       ]
     },
     {
       "id": 102,
-      "category_id": 2,
+      "category_id": 3,
       "title": "Chicken Biryani",
       "image": "chicken_biryani.jpg",
       "prep_time": "1 Hour",
@@ -364,27 +365,26 @@
     {
       "id": 113,
       "category_id": 2,
-      "title": "Cheese Dosa",
-      "image": "cheese_dosa.png",
-      "prep_time": "15 mins",
+      "title": "Masala Omelette",
+      "image": "masala_omelette.jpg",
+      "prep_time": "10 mins",
       "cook_level": "Easy",
-      "servings": 1,
+      "servings": 2,
       "ingredients": [
-        "2 cups dosa batter",
-        "½ cup grated cheese (cheddar or mozzarella)",
-        "1 small onion (finely chopped)",
-        "1 green chili (chopped, optional)",
-        "1 tbsp coriander leaves (chopped)",
+        "2 eggs",
+        "1 small onion (chopped)",
+        "1 green chili (chopped)",
+        "1 tbsp coriander (chopped)",
         "Salt to taste",
-        "1 tbsp oil or butter"
+        "Black pepper to taste",
+        "1 tbsp oil"
       ],
       "steps": [
-        "Heat a non-stick pan or tawa and grease lightly with oil/butter.",
-        "Pour a ladle of dosa batter and spread it in a thin circle.",
-        "Sprinkle chopped onion, chili, coriander, and salt on top.",
-        "Add grated cheese evenly over the dosa.",
-        "Drizzle a little oil/butter around the edges and cook on medium heat until golden and crisp.",
-        "Fold the dosa and serve hot with chutney or sambar."
+        "Crack eggs into a bowl and beat well.",
+        "Add chopped onion, chili, coriander, salt, and pepper. Mix.",
+        "Heat oil in a pan.",
+        "Pour the egg mixture and cook on low heat until golden.",
+        "Flip and cook the other side. Serve hot."
       ]
     },
     {
